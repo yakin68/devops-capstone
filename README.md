@@ -1414,7 +1414,7 @@ terraform apply -auto-approve -no-color
 
 ```bash
 ANS_KEYPAIR="petclinic-ansible-test-dev.key"
-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ${WORKSPACE}/${ANS_KEYPAIR} ubuntu@18.206.35.199 hostname
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ${WORKSPACE}/${ANS_KEYPAIR} ubuntu@54.166.40.141 hostname
 ```
   * Click `Save`
 
