@@ -1780,7 +1780,7 @@ services:
       kompose.service.expose: "{{ .Values.DNS_NAME }}"
       kompose.service.type: "nodeport"
       kompose.service.nodeport.port: "30001"
-	  kompose.service.expose.ingress-class-name: "nginx"
+	    kompose.service.expose.ingress-class-name: "nginx"
   tracing-server:
     image: openzipkin/zipkin
     ports:
@@ -1902,7 +1902,7 @@ DNS_NAME: "DNS Name of your application"
 * Create an ``S3 bucket`` for Helm charts. In the bucket, create a ``folder`` called ``stable/myapp``. The example in this pattern uses s3://petclinic-helm-charts-<put-your-name>/stable/myapp as the target chart repository.
 
 ```bash
-aws s3api create-bucket --bucket petclinic-helm-charts-<put-your-name> --region us-east-1
+aws s3api create-bucket --bucket petclinic-helm-charts-yakin --region us-east-1
 aws s3api put-object --bucket petclinic-helm-charts-<put-your-name> --key stable/myapp/
 ```
 
