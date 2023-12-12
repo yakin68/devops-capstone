@@ -144,6 +144,11 @@ pipeline {
  }
 
     post {
+        success {
+            script {
+                slackSend channel: '#class-chat', message: 'Creat my night pipeline ', teamDomain: 'itcoderscamp', tokenCredentialId: 'slacktoken'
+            }
+        }
         always {
             echo 'Deleting all local images'
             sh 'docker image prune -af'
