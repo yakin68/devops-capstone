@@ -159,7 +159,7 @@ resource "aws_instance" "kube-master" {
     vpc_security_group_ids = [aws_security_group.petclinic-kube-master-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-0e20fa945e258324e"  # select own subnet_id of us-east-1a
-    availability_zone = "us-east-1b"
+    availability_zone = "us-east-1a"
     tags = {
         Name = "kube-master"
         Project = "tera-kube-ans"
@@ -175,7 +175,7 @@ resource "aws_instance" "worker-1" {
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-0e20fa945e258324e"  # select own subnet_id of us-east-1a
-    availability_zone = "us-east-1b"
+    availability_zone = "us-east-1a"
     tags = {
         Name = "worker-1"
         Project = "tera-kube-ans"
@@ -191,7 +191,7 @@ resource "aws_instance" "worker-2" {
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-0e20fa945e258324e"  # select own subnet_id of us-east-1a
-    availability_zone = "us-east-1b"
+    availability_zone = "us-east-1a"
     tags = {
         Name = "worker-2"
         Project = "tera-kube-ans"
